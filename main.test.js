@@ -44,36 +44,63 @@ function cubeAll(array){
   return results;
 }
 // ===================================================================
-const dogs =[
-  'Fido',
-  'Rolph',
-  'Maisie',
-];
+// const dogs =[
+//   'Fido',
+//   'Rolph',
+//   'Maisie',
+// ];
 
-const cats =[
-  'Garfield',
-  'Heathcliff',
-];
+// const cats =[
+//   'Garfield',
+//   'Heathcliff',
+// ];
 
-const dinos = [
-  'Barnie',
-  'Sharp Tooth',
-];
+// const dinos = [
+//   'Barnie',
+//   'Sharp Tooth',
+// ];
 
-function addNoises(array){
-  var noises =[];
-  for(i = 0; i < array.length; i ++){
-    if(array[i] === dogs){
-      array.push(array[i].includes(' says "Woof!"'));
-    }
-    if(array[i] === cats){
-      array.push(array[i].includes(' says "Meow!"')) ;
-    }
-    else if(array[i] === dinos){
-      array.push(array[i].includes(' says "ROWR"'));
-    }
+// function addNoises(array){
+  
+//   for(i = 0; i < array.length; i ++){
+//     var noises =[];
+//     if(array[i] === dogs){
+//       noises.push(array[i].includes(' says "Woof!"'));
+//     }
+//     if(array[i] === cats){
+//       noises.push(array[i].includes(' says "Meow!"')) ;
+//     }
+//     else if(array[i] === dinos){
+//       noises.push(array[i].includes(' says "ROWR"'));
+//     }
+//   }
+// return noises;
+// }
+
+function addNoises(arr) {
+  let animalNoise = [];
+  for (const name of arr) {
+      if (
+          name === "Fido" ||
+          name === "Maisie" ||
+          name === "Rolph"
+      ) {
+          animalNoise.push(name + " says \"Woof!\"");
+      } 
+  if (
+    name === "Garfield" ||
+    name === "Heathcliff"
+    ) {
+          animalNoise.push(name + ' says "Meow!"');
+      } 
+  else if (
+    name === "Sharp Tooth" || 
+    name === "Barnie"
+    ) {
+          animalNoise.push(name + ' says "ROWR."');
+      }
   }
-return noises;
+  return animalNoise;
 }
 // =======================================================
 function womenOnly(array){
